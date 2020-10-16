@@ -26,6 +26,6 @@ docker push gcr.io/integral-cell-280701/flask_docker
 2.2. docker container cp ローカルファイル [コンテナID]:/app で　ローカルト->コンテナにファイル移動  
 3. 別のタブでdocker commit [コンテナID] flask_dockerを実行し、2.をexit  
 コンテナ全削除  
-docker ps -aq | xargs | docker rm -f  
+docker ps -aq | xargs docker rm -f  
 イメージ全削除  
-docker images -aq | xargs | docker rmi -f  
+docker images -aq | xargs docker rmi -f  

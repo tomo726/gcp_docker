@@ -14,7 +14,7 @@ def hello_world(name):
     return render_template('main.html', name=name)
 
 @app.route("/")
-def hello_world():
+def image_list():
     image_list = os.listdir('image_sample')
     # .remove()で最初の一個を消す  <- gcpだと.gcloudignoreに記述しているので.ipynb_checkpointが最初から消されている
     # image_list.remove('.ipynb_checkpoints')
