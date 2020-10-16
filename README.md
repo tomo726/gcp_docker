@@ -1,7 +1,7 @@
 # GCPでDockerを使う
 
 Dockerを使う理由:  
-OSやバージョン違いの動作に素早く対応できデプロイの速度を上げられるから
+OSやバージョン違いの動作に素早く対応できデプロイの速度を上げられるから  
 
 ## 簡略版 (ローカルにイメージを作らず直接GCPにアップ)
 - 最初  
@@ -22,10 +22,18 @@ docker tag flask_docker gcr.io/integral-cell-280701/flask_docker
 docker push gcr.io/integral-cell-280701/flask_docker  
 - 編集  
 1. docker build -t flask_docker .  
-2.1. docker run -i -t -p 8000:8000 flask_docker /bin/bash で編集  
-2.2. docker container cp ローカルファイル [コンテナID]:/app で　ローカルト->コンテナにファイル移動  
-3. 別のタブでdocker commit [コンテナID] flask_dockerを実行し、2.をexit  
+2. docker run -i -t -p 8000:8000 flask_docker /bin/bash で編集  
+3. docker container cp ローカルファイル [コンテナID]:/app で　ローカルト->コンテナにファイル移動  
+4. 別のタブでdocker commit [コンテナID] flask_dockerを実行し、2.をexit  
 コンテナ全削除  
 docker ps -aq | xargs docker rm -f  
 イメージ全削除  
 docker images -aq | xargs docker rmi -f  
+
+
+# マークダウン -> LaTeX, html
+mdファイルのあるところで、以下のコマンドを実行するとmdファイルをhtmlに変換できる、LaTeXへの変換も同様
+
+```
+docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) pandoc/latex README.md -o README.html
+```
