@@ -31,9 +31,3 @@ docker ps -aq | xargs docker rm -f
 docker images -aq | xargs docker rmi -f  
 
 
-# マークダウン -> LaTeX, html
-mdファイルのあるところで、以下のコマンドを実行するとmdファイルをhtmlに変換できる、LaTeXへの変換も同様
-
-```
-docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) pandoc/latex README.md -o README.html
-```

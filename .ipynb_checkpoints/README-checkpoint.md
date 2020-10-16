@@ -29,3 +29,5 @@ docker push gcr.io/integral-cell-280701/flask_docker
 docker ps -aq | xargs docker rm -f  
 イメージ全削除  
 docker images -aq | xargs docker rmi -f  
+
+
