@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>untitled</title>
+  <title>untitled1</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!-- Style for Markdown -->
   <style>
@@ -300,76 +300,24 @@ pre {
 </head>
 <body>
   <div class="md2html-container">
-<h1 id="マークダウン---latex-html">マークダウン -&gt; LaTeX, html</h1>
-<p>mdファイルのあるところで、以下のコマンドを実行するとmdファイルをhtmlに変換できる、LaTeXへの変換も同様</p>
-<pre><code>pandoc -f markdown -t html --template templates/md2html.html untitled.md &gt; templates/[htmlファイル]</code></pre>
-<h2 id="テーブル">テーブル</h2>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Left align</th>
-<th style="text-align: right;">Right align</th>
-<th style="text-align: center;">Center align</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">This</td>
-<td style="text-align: right;">This</td>
-<td style="text-align: center;">This</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">column</td>
-<td style="text-align: right;">column</td>
-<td style="text-align: center;">column</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">will</td>
-<td style="text-align: right;">will</td>
-<td style="text-align: center;">will</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">be</td>
-<td style="text-align: right;">be</td>
-<td style="text-align: center;">be</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">left</td>
-<td style="text-align: right;">right</td>
-<td style="text-align: center;">center</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">aligned</td>
-<td style="text-align: right;">aligned</td>
-<td style="text-align: center;">aligned</td>
-</tr>
-</tbody>
-</table>
-<h2 id="引用">引用</h2>
-<blockquote>
-<p>結構頑張ったぽい?</p>
-</blockquote>
-<h2 id="箇条書きリスト">箇条書きリスト</h2>
-<ul>
-<li>りんご</li>
-<li>ごはん</li>
-</ul>
-<h2 id="リスト">リスト</h2>
-<ol type="1">
-<li>あ</li>
-<li>い</li>
-</ol>
-<h2 id="イタリック太字">イタリック・太字</h2>
-<p><em>イタリック</em><br />
-<strong>太字</strong></p>
-<h2 id="リンク">リンク</h2>
-<p><a href="http://www.yahoo.co.jp">Yahoo</a></p>
-<h2 id="取り消し線">取り消し線</h2>
-<p><del>取り消し</del></p>
-<h2 id="画像">画像</h2>
-<figure>
-<img src="image_sample/ナルト_2.jpg" alt="サンプル" /><figcaption aria-hidden="true">サンプル</figcaption>
-</figure>
+<h1 id="sshとvpnについて">SSHとVPNについて</h1>
+<h2 id="具体例">具体例</h2>
+<p>別の場所の会議室で、自宅から同僚と電話で会話しています。 VPNを使用すると、役員室の全員があなたの声を聞くことができ、あなたはそれを聞くことができますが、 SSHではあなたの声を聞くことができるのは1人だけです。 VPNはあなたをネットワークに接続し、SSHを単一のコンピューターに接続します。</p>
+<h2 id="主な違い">主な違い</h2>
+<p>VPN: トランスポートレベルで動作<br />
+SSH: アプリケーションレベルで動作</p>
+<h2 id="目的">目的</h2>
+<p>VPN: 学内のネットワークに家から安全に接続する<br />
+SSH: 研究室のサーバにアクセスして計算機を動かす</p>
+<h2 id="httpsは">HTTPSは</h2>
+<p>httpsはアプリケーション層のhttpをセキュア化したもの<br />
+VPNはトランスポート層をセキュア化したもの<br />
+SSHもアプリケーション層</p>
+<h2 id="セッション層">セッション層</h2>
+<p>セキュリティを扱う?<br />
+通信方式を含めた鍵関係の話が多い気がする</p>
+<h2 id="プレゼンテーション層">プレゼンテーション層</h2>
+<p>データのフォーマット変換(文字コードの変換等)</p>
   </div>
 </body>
 </html>

@@ -29,7 +29,7 @@ app = Flask(__name__, static_folder='')
 
 @app.route("/")
 def markdown():
-    return render_template("sample.html")
+    return render_template("main.html")
 
 
 # 127.0.0.1(=localhost)はループバックアドレス(自分しか見れない)

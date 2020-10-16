@@ -3,7 +3,7 @@ mdファイルのあるところで、以下のコマンドを実行するとmd�
 
 ## コードブロック
 ```
-pandoc -f markdown -t html --template templates/md2html.html untitled.md > templates/[htmlファイル]
+pandoc -f markdown -t html --template templates/md2html.html markdown/untitled.md > templates/[htmlファイル]
 ```
 
 ## テーブル
