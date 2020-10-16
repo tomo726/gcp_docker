@@ -9,6 +9,8 @@ import os
 # デフォルトでhtmlからアクセスできるフォルダはstaticという名前でなければいけないため以下のように変更
 app = Flask(__name__, static_folder='')
 
+
+# 関数名が同じだとエラーが出る
 @app.route("/<name>")
 def hello_world(name):
     return render_template('main.html', name=name)
@@ -17,7 +19,7 @@ def hello_world(name):
 def image_list():
     image_list = os.listdir('image_sample')
     # .remove()で最初の一個を消す  <- gcpだと.gcloudignoreに記述しているので.ipynb_checkpointが最初から消されている
-    # image_list.remove('.ipynb_checkpoints')
+    image_list.remove('.ipynb_checkpoints')
     url_list = ['image_sample/' + image for image in image_list]
     return render_template('untitled.html', url_list=url_list)
 
