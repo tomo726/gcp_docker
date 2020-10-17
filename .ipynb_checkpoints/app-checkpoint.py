@@ -40,7 +40,8 @@ def pos_neg(text):
     cmd = ['python', './cnn-text-classification-pytorch/main.py', '-predict', text,
            '-snapshot', './cnn-text-classification-pytorch/snapshot/2020-10-17_17-26-19/best_steps_2200.pt']
     runcmd = subprocess.run(cmd, encoding='utf-8', stdout=subprocess.PIPE)
-    sentiment = runcmd.stdout.split()[-1]
+#     sentiment = runcmd.stdout.split()[-1]
+    sentiment = runcmd.stdout
     return '<br>\n' + text + ' の感情は: ' + sentiment
 
 
