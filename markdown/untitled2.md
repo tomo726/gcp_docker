@@ -1,6 +1,7 @@
 # List of demo, code, paper
 
 <!-- ## Usage
+githubではなくwebサイトを用いる利点はデモを行いやすいこと
 1. htmlファイルの作成
     1. githubのリポジトリを作ってコードをアップする (codeの編集のみ)
     1. 以下のコマンドを実行するとmdファイルからhtmlファイルに変換できる。LaTeXにも変換可能。  
