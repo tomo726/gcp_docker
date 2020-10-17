@@ -10,7 +10,9 @@ COPY . .
 # RUNはbuild時に実行され、CMDはコンテナを立ち上げる (ローカルならdocker run、GCPならCloud Run)
 # Install production dependencies.
 RUN pip install Flask gunicorn
-RUN pip install numpy torch torchtext
+RUN pip install numpy
+RUN pip install torch
+RUN pip install torchtext
 
 
 # Run the web service on container startup. Here we use the gunicorn
