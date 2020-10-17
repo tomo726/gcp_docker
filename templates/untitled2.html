@@ -301,22 +301,27 @@ pre {
 <body>
   <div class="md2html-container">
 <h1 id="list-of-code-and-paper">List of code and paper</h1>
-<p>以下のコマンドを実行するとmdファイルからhtmlファイルに変換できる。LaTeXにも変換可能。</p>
-<pre><code>pandoc -f markdown -t html --template templates/md2html.html markdown/untitled2.md &gt; templates/untitled2.html</code></pre>
-<h2 id="code">code</h2>
+<h2 id="usage">Usage</h2>
+<ol type="1">
+<li>htmlファイルの作成
+<ol type="1">
+<li>githubのリポジトリを作ってコードをアップする (codeの編集のみ)</li>
+<li>以下のコマンドを実行するとmdファイルからhtmlファイルに変換できる。LaTeXにも変換可能。<br />
+<code>pandoc -f markdown -t html --template templates/md2html.html markdown/untitled2.md &gt; templates/untitled2.html</code></li>
+</ol></li>
+<li>flack_gcpディレクトリに入り<code>gp [コミットメッセージ]</code>を実行</li>
+</ol>
+<h2 id="code">Code</h2>
 <p><a href="https://github.com/tomo726/gcp_docker">GCPにDockerを上げてWebサイトを公開</a></p>
 <p><a href="https://github.com/tomo726/selenium_usage">画像スクレイピング等におけるseleniumの使い方</a></p>
-<h2 id="paper">paper</h2>
+<h2 id="paper">Paper</h2>
 <p><a href="https://arxiv.org/pdf/1907.11932.pdf">Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment [Jin+, 2020]</a><br />
 Bertに対するadversarial textをblackboxとして(中身を知らない状態で)作る研究で、次のステップで変更する単語を見つける<br />
 Step1: Word Importance Ranking (予測の上で重要な単語を取り出す)<br />
-Step2: Word Transfer (以下の３つを満たすなら単語を入れ替える)</p>
-<ul>
-<li>embedding空間で近いものN個を取り出す<br />
-</li>
-<li>品詞が一致しているかチェック</li>
-<li>Universal Sentence Encoder (USE) (Cer et al. 2018)を使って文をベクトル化し、単語を入れ替える前後で大きく意味(ベクトル)が変化していないかチェック</li>
-</ul>
+Step2: Word Transfer (以下の３つを満たすなら単語を入れ替える)<br />
+・ embedding空間で近いものN個を取り出す<br />
+・ 品詞が一致しているかチェック<br />
+・ Universal Sentence Encoder (USE) (Cer et al. 2018)を使って文をベクトル化し、単語を入れ替える前後で大きく意味(ベクトル)が変化していないかチェック</p>
   </div>
 </body>
 </html>
