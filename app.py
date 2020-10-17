@@ -34,7 +34,7 @@ def markdown():
     return render_template("untitled2.html")
 
 
-@app.route("/pos_neg")
+@app.route("/pos_neg/<text>")
 def pos_neg(text):
     text = 'You just make me so sad and I have to leave you .'
     cmd = ['python', './cnn-text-classification-pytorch/main.py', '-predict', text,
