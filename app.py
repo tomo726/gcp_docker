@@ -29,6 +29,8 @@ app = Flask(__name__, static_folder='')
 # def sample():
 #     return render_template('untitled2.html')
 
+
+# 外部のリポジトリを含む際には.gitファイルを消してディレクトリ名を変更する必要あり (そうしないとディレクトリに白い矢印マークが現れる)
 @app.route("/")
 def markdown():
     return render_template("untitled2.html")
