@@ -39,7 +39,7 @@ def markdown():
 @app.route("/pos_neg/<text>")
 def pos_neg(text):
     text = 'You just make me so sad and I have to leave you .'
-    cmd = ['python', './cnn-text-classification-pytorch/main.py', '-predict', text, '-snapshot', './cnn-text-classification-pytorch/snapshot/2020-10-17_17-26-19/best_steps_2200.pt']
+    cmd = ['python', './cnn-text-classification-pytorch_rm_git/main.py', '-predict', text, '-snapshot', './cnn-text-classification-pytorch_rm_git/snapshot/2020-10-17_17-26-19/best_steps_2200.pt']
     runcmd = subprocess.run(cmd, encoding='utf-8', stdout=subprocess.PIPE)
     runcmd2 = subprocess.run(['ls'], encoding='utf-8', stdout=subprocess.PIPE)
 #     sentiment = runcmd.stdout.split()[-1]
