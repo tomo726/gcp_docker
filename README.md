@@ -19,10 +19,10 @@ container repositoryからGCEにデプロイを選択し、Cloud Engineのイン
 docker run -i -t -e PORT=8080 -p 8080:8080 bce5cedefa07 /bin/bash
 `
 ## ローカルから細かく行う方法 (不要)
-- 最初
-`docker build -t flask_docker .`
-ローカルコンテナの実行:  
-`docker run -e PORT=8000 -p 8000:8000 flask_docker  `
+- 最初  
+`docker build -t flask_docker .`  
+ローカルコンテナの実行:    
+`docker run -e PORT=8000 -p 8000:8000 flask_docker`  
 
 サーバにコンテナを上げる:    
 tagも毎回付け直す必要がある  
