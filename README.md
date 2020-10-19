@@ -5,8 +5,10 @@ OSやバージョン違いの動作に素早く対応できデプロイの速度
 
 ## 簡略版 (ローカルにイメージを作らず直接Cloud Runにアップ)
 - 最初  
+`
 gcloud builds submit --tag gcr.io/celtic-fact-283407/helloworld  
 gcloud run deploy --region=asia-northeast1 --image gcr.io/celtic-fact-283407/helloworld --platform managed  
+`
 - 編集      
 「継続的デプロイを編集」によってgit pushをすれば自動で更新される  
 
