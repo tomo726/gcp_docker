@@ -44,7 +44,7 @@ docker images -aq | xargs docker rmi -f
 ## GPUを使う方法
 IAMと管理->割り当てからcompute engineのT4とall regionsを１つづつ申請する  
 Container RepositoryからGCEで開いてGPUの設定を行う  
-不定期に(原因不明で)エラーが出てインスタンスを起動できない(一度に存在できるGPUが１つまでという設定だから?)  
-ubuntuを使うとちゃんとドライバとcudaをインストールできた(dockerはgoogleが専用のosを用意するので`cos-extensions install gpu`を実行)  
+一度に存在できるGPUが１つまでなので、インスタンスが2つあるとエラー)
+ubuntuを使うとちゃんとドライバとcudaをインストールできた(dockerはgoogleが専用のosを用意するので`cos-extensions install gpu`を実行したけどエラー)  
 GPUを使わなくてもGCEは高め  
 -> AI Platformを使う
