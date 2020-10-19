@@ -12,7 +12,7 @@ gcloud run deploy --region=asia-northeast1 --image gcr.io/celtic-fact-283407/hel
 - 編集      
 「継続的デプロイを編集」によってgit pushをすれば自動で更新される  
 
-## 簡略版 (ローカルにイメージを作らず直接Cloud Engineにアップ)
+## Compute Engineでサーバ側のエラーチェック(.gitに注意すればローカルのDockerで代用可)
 Cloud Runの補助として、sshでインスタンス内部に入り動作確認したり、GPUを使って学習する方法。  
 container repositoryからGCEにデプロイを選択し、Cloud Engineのインスタンスにsshし以下のコマンドを実行。  
 `
