@@ -44,6 +44,6 @@ docker images -aq | xargs docker rmi -f
 ## GPUを使う方法
 IAMと管理->割り当てからcompute engineのT4とall regionsを１つづつ申請する  
 Container RepositoryからGCEで開いてGPUの設定を行う  
-httpの設定をするとエラーが出てインスタンスを起動できない  
+不定期に(原因不明で)エラーが出てインスタンスを起動できない  
 GPUを使わなくてもGCEは高め  
 -> AI Platformを使う
