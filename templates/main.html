@@ -1,20 +1,34 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <meta charset="utf-8">
-    <title>github一覧</title>
-    </head>
-    <body>
-        <h1>program</h1>
-        <h3><a href= "https://github.com/tomo726/gcp_docker" >GCPにDockerを上げてWebサイトを公開</a></h3>
-        
-        <h1>paper</h1>
-        <h3><a href= "https://arxiv.org/pdf/1907.11932.pdf" >Is BERT Really Robust? A Strong Baseline for Natural Language Attack
-on Text Classification and Entailment</a></h3>
-        <p>Bertに対するadversarial textをblackboxとして(中身を知らない状態で)作る研究で、次のステップで変更する単語を見つける<br>
-            Step1: Word Importance Ranking (予測の上で重要な単語を取り出す)<br>
-            Step2: Word Transfer<br>
-            &nbsp;あいうえ&#009;aa
-    </body>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="md2html-container">
+<h1 id="list-of-demo-code-paper">List of demo, code, paper</h1>
+<!-- ## Usage
+1. htmlファイルの作成
+    1. githubのリポジトリを作ってコードをアップする (codeの編集のみ)
+    1. 以下のコマンドを実行するとmdファイルからhtmlファイルに変換できる。LaTeXにも変換可能。
+    `
+    pandoc -f markdown -t html --template templates/md2html.html markdown/untitled2.md > templates/untitled2.html
+    `
+1. flack_gcpディレクトリに入り`gp [コミットメッセージ]`を実行 -->
+<h2 id="demo">Demo</h2>
+<p>チャットボット、yolo等をのせる</p>
+<h2 id="code">Code</h2>
+<p><a href="https://github.com/tomo726/gcp_docker">GCPにDockerを上げてWebサイトを公開</a></p>
+<p><a href="https://github.com/tomo726/selenium_usage">画像スクレイピング等におけるseleniumの使い方</a></p>
+<p><a href="https://github.com/tomo726/coupon_collector_problem">クーポンコレクタ問題</a></p>
+<h2 id="paper">Paper</h2>
+<p><a href="https://arxiv.org/pdf/1907.11932.pdf">Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment [Jin+, 2020]</a><br />
+Bertに対するadversarial textをblackboxとして(中身を知らない状態で)作る研究で、次のステップで変更する単語を見つける<br />
+Step1: Word Importance Ranking (予測の上で重要な単語を取り出す)<br />
+Step2: Word Transfer (以下の３つを満たすなら単語を入れ替える)<br />
+・ embedding空間で近いものN個を取り出す<br />
+・ 品詞が一致しているかチェック<br />
+・ Universal Sentence Encoder (USE) (Cer et al. 2018)を使って文をベクトル化し、単語を入れ替える前後で大きく意味(ベクトル)が変化していないかチェック</p>
+</div>
+</body>
 </html>
-

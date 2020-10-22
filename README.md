@@ -47,4 +47,4 @@ Container RepositoryからGCEで開いてGPUの設定を行う
 一度に存在できるGPUが１つまでなので、インスタンスが2つあるとエラー)
 ubuntuを使うとちゃんとドライバとcudaをインストールできた(dockerはgoogleが専用のosを用意するので`cos-extensions install gpu`を実行したけどエラー)  
 GPUを使わなくてもGCEは高め  
--> AI Platformを使う
+-> AI Platformを使う -> colabの方がよさげ
